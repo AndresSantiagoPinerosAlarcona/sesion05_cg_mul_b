@@ -17,6 +17,28 @@ public class Main
 
 class Coord {
     private int x, y;
+
+    public Coord(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+    
 }
 
 class Cuadrado {
@@ -26,11 +48,13 @@ class Cuadrado {
         this.c = c;
         this.lado = lado;
     }
-    public void Traslacion() {  // Complete los parámetros requeridos
-        
+    public void Traslacion(Coord t) {  // Complete los parámetros requeridos
+        c.setX(t.getX()+c.getX());
+        c.setY(t.getY()+c.getY());
+    
     }
-    public void Escalado() {  // Complete los parámetros requeridos
-        
+    public void Escalado(int s) {  // Complete los parámetros requeridos
+        lado = (int)(lado*(1+s/100.0f));
     }
     public void Rotacion() {  // Complete los parámetros requeridos
         
