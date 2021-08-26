@@ -56,7 +56,8 @@ class Cuadrado {
     public void Escalado(int s) {  // Complete los parámetros requeridos
         lado = (int)(lado*(1+s/100.0f));
     }
-    public void Rotacion() {  // Complete los parámetros requeridos
+    public void Rotacion(Coord c, int lado) {  // Complete los parámetros requeridos
+        Coord P1 = c.getX()*angulo,  c.getY()*angulo;
         
     }
 }
@@ -64,5 +65,6 @@ class Cuadrado {
 class Circunferencia {
     Coord c;
     float radio;
+    
     // Implementar los métodos Traslacion, Escalado y Rotacion para ésta clase
 }
